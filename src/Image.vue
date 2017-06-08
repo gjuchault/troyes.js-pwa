@@ -1,6 +1,6 @@
 <template>
   <div class="troyes-image">
-    <img :src="applied" :width="width" :height="height" :alt="alt" :style="appliedStyle" />
+    <img :src="src" :width="width" :height="height" :alt="alt" />
   </div>
 </template>
 

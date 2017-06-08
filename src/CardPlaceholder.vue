@@ -1,5 +1,5 @@
 <template>
-  <div class="troyes-card-placeholder-wrapper">
+  <div class="troyes-card-placeholder-wrapper" v-show="loaded">
     <div class="troyes-card-placeholder troyes-card troyes-card-hoverable">
       <div ref="bg" class="troyes-card-placeholder__title">
         <h2 v-html="title"></h2>
@@ -23,6 +23,7 @@ export default {
 
 
     return {
+      loaded: false,
       title: '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;',
       tag: '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;',
       desc
@@ -34,6 +35,7 @@ export default {
       .then((res) => res.json())
       .then((bin) => {
         this.$refs.bg.style.backgroundColor = bin.header
+        this.loaded = true
         this.title = bin.title
         this.tag = bin.tag
         this.desc = bin.content

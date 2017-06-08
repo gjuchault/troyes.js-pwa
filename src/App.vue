@@ -293,14 +293,14 @@ h1 {
   background-color: #682566;
 }
 
-.wf-active body {
+body {
   font-family: 'Catamaran', sans-serif;
   line-height: 1.3;
   font-size: 16px;
   font-size-adjust: .5;
 }
 
-.wf-active h1 {
+h1 {
   font-family: 'Pacifico', cursive;
   font-size: 36px;
 }
